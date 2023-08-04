@@ -18,8 +18,8 @@
 
 /*===== General Vars =====*/
 #define VAR_TERRAIN 0x5000 //Set to a terrain type for a battle to begin with the given terrain
-#define VAR_TOTEM 0x5001 //to var + 3 (0x5004)
-#define VAR_BACKSPRITE_SWITCH 0x5006 //This var can be set to a number to change the Player's backsprite
+//#define VAR_TOTEM 0x5001 //to var + 3 (0x5004)
+//#define VAR_BACKSPRITE_SWITCH 0x5006 //This var can be set to a number to change the Player's backsprite
 //#define VAR_BATTLE_BG 0x5007 //Set this var to a custom background id
 #define VAR_SWARM_INDEX 0x5008 //Set by the engine
 #define VAR_SWARM_DAILY_EVENT 0x5009 //Set by the engine. Used to tell the game if a swarm has already been generated for the day. (Uses + 1 var also)
@@ -33,48 +33,48 @@
 #define VAR_PARTNER_BACKSPRITE 0x5012 //Set this to the var used to store the backsprite number of your partner in Multi Battles (can be any free var)
 
 /*===== General Flags =====*/
-#define FLAG_INVERSE 0x900 //Set this flag for all battles to become Inverse Battles
-#define FLAG_SKY_BATTLE 0x901 //Set this flag to indicate the Sky Battle rules should be followed in the next battle.
+//#define FLAG_INVERSE 0x900 //Set this flag for all battles to become Inverse Battles
+//#define FLAG_SKY_BATTLE 0x901 //Set this flag to indicate the Sky Battle rules should be followed in the next battle.
 #define FLAG_NO_CATCHING 0x902 //The player cannot catch Pokemon in battles when this flag is set
 #define FLAG_NO_RUNNING 0x903 //The player cannot run in battles when this flag is set
 #define FLAG_NO_CATCHING_AND_RUNNING 0x904 //The player cannot run or catch Pokemon in battles when this flag is set
-#define FLAG_CATCH_TRAINERS_POKEMON 0x905 //Setting this flag will allow you to capture trainers' pokemon. Comment this line to remove this feature
+//#define FLAG_CATCH_TRAINERS_POKEMON 0x905 //Setting this flag will allow you to capture trainers' pokemon. Comment this line to remove this feature
 #define FLAG_EXP_SHARE 0x906 //Used to indicate if the Gen 6+ Exp Share is enabled
 #define FLAG_DOUBLE_BATTLE 0x907 //Setting this flag will automatically trigger a double battle if possible
 #define FLAG_TAG_BATTLE 0x908 //This flag is set by the engine when trainerbattle 0x10 is used to activate a tag battle
 #define FLAG_TWO_OPPONENTS 0x909 //This flag is set by the engine when trainerbattle 0x11 is used to activate a dual opponent battle
-#define FLAG_ACTIVATE_TUTORIAL 0x90A //Setting this flag will allow you to activate Oak's tutorial in any kind of battle (including doubles). Comment this line to remove this feature
-#define FLAG_WILD_CUSTOM_MOVES 0x90B //Setting this flag lets you assign wild Pokemon custom moves
-#define FLAG_SMART_WILD 0x90C //Set this flag is you don't want wild Pokemon to act randomly (useful for one time smarter wild battles). This is cleared at the end of the battle.
-#define FLAG_SCALE_WILD_POKEMON_LEVELS 0x90D //If this flag is set, all random wild Pokemon (other than scripted ones) will have their level scaled to the lowest level in the player's party
+//#define FLAG_ACTIVATE_TUTORIAL 0x90A //Setting this flag will allow you to activate Oak's tutorial in any kind of battle (including doubles). Comment this line to remove this feature
+//#define FLAG_WILD_CUSTOM_MOVES 0x90B //Setting this flag lets you assign wild Pokemon custom moves
+//#define FLAG_SMART_WILD 0x90C //Set this flag is you don't want wild Pokemon to act randomly (useful for one time smarter wild battles). This is cleared at the end of the battle.
+//#define FLAG_SCALE_WILD_POKEMON_LEVELS 0x90D //If this flag is set, all random wild Pokemon (other than scripted ones) will have their level scaled to the lowest level in the player's party
 #define FLAG_SCALE_TRAINER_LEVELS 0x90E //If this flag is set, all Trainer Pokemon levels will be set to the highest in your party
-#define FLAG_HIDDEN_ABILITY 0x90F //If this flag is set, generated wild Pokemon will have their hidden abilities
-#define FLAG_GIGANTAMAXABLE 0x928 //If this flag is set, generated wild and gift Pokemon will have their Gigantamax bit set
-#define FLAG_DOUBLE_WILD_BATTLE 0x910 //If this flag is set, a wild battles will be against two Pokemon
+//#define FLAG_HIDDEN_ABILITY 0x90F //If this flag is set, generated wild Pokemon will have their hidden abilities
+//#define FLAG_GIGANTAMAXABLE 0x928 //If this flag is set, generated wild and gift Pokemon will have their Gigantamax bit set
+//#define FLAG_DOUBLE_WILD_BATTLE 0x910 //If this flag is set, a wild battles will be against two Pokemon
 #define FLAG_NO_RANDOM_WILD_ENCOUNTERS 0x911 //If this is set, wild Pokemon won't appear when walking/surfing in grass, caves, water, etc.
 #define FLAG_REMOVE_EVO_ITEM 0x912  //Flag to toggle item removal after leveling up (set by the engine)
-#define FLAG_SHINY_CREATION 0x913 //Flag to cause next battle to be against a shiny Pokemon
+//#define FLAG_SHINY_CREATION 0x913 //Flag to cause next battle to be against a shiny Pokemon
 #define FLAG_AUTO_RUN 0x914 //Flag to enable auto-run (toggled by L-button). If this feature is used, L=A will not work. Comment out this line for it to work again.
 #define FLAG_RUNNING_ENABLED 0x82F //The player can only run if this flag is set. If commented, the player will start the game with running shoes.
-#define FLAG_BIKE_TURBO_BOOST 0x91F //The bike moves extra fast if this flag is set or if the player holds B.
-#define FLAG_SURF_TURBO_BOOST 0x929 //The Surf blob moves extra fast if set
-#define FLAG_DISABLE_BAG 0x915 //The bag can't be used in-battle if this flag is set
-#define FLAG_MOVE_RELEARNER_IGNORE_LEVEL 0x916 //When set, the move relearner shows all level-up moves up to MAX_LEVEL
-#define FLAG_EGG_MOVE_RELEARNER 0x917 //When set, the move learner loads egg moves instead
-#define FLAG_DYNAMAX_BATTLE 0x918 //When set, Pokemon can Dynamax in battle
-#define FLAG_RAID_BATTLE 0x919 //When set, wild Pokemon will appear Dynamaxed and be fought Raid Battle style.
-#define FLAG_RAID_BATTLE_NO_FORCE_END 0x91A //When set, if FLAG_RAID_BATTLE is set, then raid battles won't be force ended.
+//#define FLAG_BIKE_TURBO_BOOST 0x91F //The bike moves extra fast if this flag is set or if the player holds B.
+//#define FLAG_SURF_TURBO_BOOST 0x929 //The Surf blob moves extra fast if set
+//#define FLAG_DISABLE_BAG 0x915 //The bag can't be used in-battle if this flag is set
+//#define FLAG_MOVE_RELEARNER_IGNORE_LEVEL 0x916 //When set, the move relearner shows all level-up moves up to MAX_LEVEL
+//#define FLAG_EGG_MOVE_RELEARNER 0x917 //When set, the move learner loads egg moves instead
+//#define FLAG_DYNAMAX_BATTLE 0x918 //When set, Pokemon can Dynamax in battle
+//#define FLAG_RAID_BATTLE 0x919 //When set, wild Pokemon will appear Dynamaxed and be fought Raid Battle style.
+//#define FLAG_RAID_BATTLE_NO_FORCE_END 0x91A //When set, if FLAG_RAID_BATTLE is set, then raid battles won't be force ended.
 #define FLAG_FAST_BATTLE_MESSAGES 0x925 //When set, battle messages have no wait time once they've completed printing
 #define FLAG_FOLLOWER_IGNORE_ACTIVE_SCRIPT 0x926 //If set, the follower will reappear and move even when a script is in progress
-#define FLAG_KEEP_CONSUMABLE_ITEMS 0x927 //If set, consumable items are returned after battles
-#define FLAG_UNLOCKED_DEXNAV_HELD_ITEMS 0x92A //If set, possible held items will be displayed for wild Pokemon on the DexNav UI
-#define FLAG_DAILY_EVENTS_START 0xE00 //To flag + 0xFF, resets every new day.
+//#define FLAG_KEEP_CONSUMABLE_ITEMS 0x927 //If set, consumable items are returned after battles
+//#define FLAG_UNLOCKED_DEXNAV_HELD_ITEMS 0x92A //If set, possible held items will be displayed for wild Pokemon on the DexNav UI
+//#define FLAG_DAILY_EVENTS_START 0xE00 //To flag + 0xFF, resets every new day.
 
 /*===== Start Menu/Poketools Flags =====*/
 #define FLAG_SYS_BAG_HIDE 0x91B		//Toggle bag off
 #define FLAG_SYS_PLAYER_HIDE 0x91C	//Toggle [player] off
 #define FLAG_SYS_SAVE_HIDE 0x91D	//Toggle save off
-#define FLAG_SYS_DEXNAV 0x91E		//Flag to turn dexnav on/off in start menu (if undefined, this will eliminate dexnav from the start menu)
+//#define FLAG_SYS_DEXNAV 0x91E		//Flag to turn dexnav on/off in start menu (if undefined, this will eliminate dexnav from the start menu)
 
 /*===== Pedometer Flags as in JPAN Engine =====*/
 #define FLAG_LONG_PEDOMETER 0x920		//32 bit / 4 bytes / Max 4 294 967 295 steps
@@ -100,16 +100,16 @@ enum //These vars need to be one after the other (hence the enum)
 };
 
 /*===== Character Customization Vars =====*/
-#define VAR_PLAYER_WALKRUN 0x501F			//Change walking, running player sprite. 0x4054 in JPAN engine.
-#define VAR_PLAYER_BIKING 0x5020			//Change biking player sprite. 0x4055 in JPAN engine.
-#define VAR_PLAYER_SURFING 0x5021			//Change player surfing sprite. 0x4056 in JPAN engine.
-#define VAR_PLAYER_HM_USE 0x5022			//Change field move usage sprite. 0x4057 in JPAN engine.
-#define VAR_PLAYER_FISHING 0x5023			//Change fishing sprite. 0x4058 in JPAN engine.
-#define VAR_PLAYER_VS_SEEKER 0x503D         //Change vs seeker usage sprite. NOT in JPAN's engine
-#define VAR_PLAYER_VS_SEEKER_ON_BIKE 0x5024	//Change vs seeker on bike sprite. 0x4059 in JPAN engine.
-#define VAR_PLAYER_UNDERWATER 0x5025		//Change underwater sprite.
-#define VAR_TRAINERCARD_MALE 0x5026			//Change trainer card image (male). 0x4060 in JPAN engine.
-#define VAR_TRAINERCARD_FEMALE 0x5027		//Change trainer card image (female). 0x4061 in JPAN engine.
+//#define VAR_PLAYER_WALKRUN 0x501F			//Change walking, running player sprite. 0x4054 in JPAN engine.
+//#define VAR_PLAYER_BIKING 0x5020			//Change biking player sprite. 0x4055 in JPAN engine.
+//#define VAR_PLAYER_SURFING 0x5021			//Change player surfing sprite. 0x4056 in JPAN engine.
+//#define VAR_PLAYER_HM_USE 0x5022			//Change field move usage sprite. 0x4057 in JPAN engine.
+//#define VAR_PLAYER_FISHING 0x5023			//Change fishing sprite. 0x4058 in JPAN engine.
+//#define VAR_PLAYER_VS_SEEKER 0x503D         //Change vs seeker usage sprite. NOT in JPAN's engine
+//#define VAR_PLAYER_VS_SEEKER_ON_BIKE 0x5024	//Change vs seeker on bike sprite. 0x4059 in JPAN engine.
+//#define VAR_PLAYER_UNDERWATER 0x5025		//Change underwater sprite.
+//#define VAR_TRAINERCARD_MALE 0x5026			//Change trainer card image (male). 0x4060 in JPAN engine.
+//#define VAR_TRAINERCARD_FEMALE 0x5027		//Change trainer card image (female). 0x4061 in JPAN engine.
 
 #define VAR_RUNTIME_CHANGEABLE 0x5028	//'Secret Base' variables, save 15 consecutive variables for this. 0x4080 in JPAN engine.
 
